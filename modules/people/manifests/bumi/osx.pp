@@ -27,7 +27,7 @@ class people::bumi::osx {
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
     key    => 'AppleShowAllExtensions',
-    value  => true
+    value  => true, 
     notify => Exec['killall Finder'];
   }
 
@@ -36,7 +36,7 @@ class people::bumi::osx {
     user   => $::boxen_user,
     domain => 'com.apple.finder',
     key    => 'FXEnableExtensionChangeWarning',
-    value  => false
+    value  => false,
     notify => Exec['killall Finder'];
   }
 
