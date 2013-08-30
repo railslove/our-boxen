@@ -38,6 +38,8 @@ github "qt", "1.0.1"
 github "phantomjs", "2.0.2"
 github "postgresql", "2.0.1"
 github "redis", "1.0.0"
+github "osx", "1.6.0"
+
 github "mumble", "1.0.5"
 github "spotify", "1.0.1"
 github "onepassword", "1.0.2"
