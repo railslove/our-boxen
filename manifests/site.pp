@@ -69,7 +69,6 @@ node default {
   include phantomjs::1_9_0
   include mongodb
   include redis
-  include zsh
 
   # node versions
   include nodejs::v0_10

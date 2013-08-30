@@ -6,15 +6,7 @@ class people::bumi {
   
   include people::bumi::applications
 
-  osx_chsh { $::luser:
-    shell   => '/opt/boxen/homebrew/bin/zsh',
-    require => Package['zsh'],
-  }
-  file_line { 'add zsh to /etc/shells':
-    path    => '/etc/shells',
-    line    => "${boxen::config::homebrewdir}/bin/zsh",
-    require => Package['zsh'],
-  }
+  include zsh
 
   repository { "${dotfiles}":
     source => 'bumi/dotfiles',
