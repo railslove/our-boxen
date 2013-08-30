@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "boxen", "~> 1.5"
+gem "boxen", :git => "https://github.com/boxen/boxen"
 gem "open4", "~> 1.3"
 
 group :development do
