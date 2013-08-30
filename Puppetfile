@@ -40,6 +40,7 @@ github "postgresql", "2.0.1"
 github "redis", "1.0.0"
 github "osx", "1.6.0"
 github "sysctl", "1.0.0"
+github "java", "1.1.2"
 
 github "mumble", "1.0.5"
 github "spotify", "1.0.1"
