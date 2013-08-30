@@ -5,6 +5,7 @@ class people::bumi {
   $dotfiles = "${home}/.dotfiles"
   
   include people::bumi::applications
+  include people::bumi::osx
 
   include zsh
 
