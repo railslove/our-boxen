@@ -67,7 +67,7 @@ node default {
   include postgresql
   include elasticsearch
   include phantomjs::1_9_0
-  phantomjs::global { '1.9.0': }
+  include phantomjs::global { '1.9.0': }
   include mongodb
   include redis
   include zsh
