@@ -21,7 +21,7 @@ class people::bumi {
   }
   exec { "install dotfiles":
     cwd      => $dotfiles,
-    command  => "script/bootstrap"
+    command  => "script/bootstrap",
     provider => shell,
     creates  => "${home}/.zshrc",
     require  => Repository[$dotfiles]
