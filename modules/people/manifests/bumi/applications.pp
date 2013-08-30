@@ -16,11 +16,4 @@ class people::bumi::applications {
   include mumble
   include evernote
   include screenhero
-  include mou
-  include mou::themes
-  mou::preferences { 'Mou':
-    theme => 'Solarized (Dark)+',
-    css => 'GitHub2'
-  }
-
 }
