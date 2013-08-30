@@ -62,7 +62,6 @@ github "zsh", "1.0.0"
 github "alfred", "1.1.2"
 github "iterm2", "1.0.3"
 github "evernote", "2.0.4"
-github "macvim", "1.0.0"
 github "skype", "1.0.4"
 
 # Optional/custom modules. There are tons available at

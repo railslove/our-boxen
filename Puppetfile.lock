@@ -99,11 +99,6 @@ GITHUBTARBALL
     java (1.1.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-macvim
-  specs:
-    macvim (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-mongodb
   specs:
     mongodb (1.0.4)
@@ -250,7 +245,6 @@ DEPENDENCIES
   inifile (= 1.0.0)
   iterm2 (= 1.0.3)
   java (= 1.1.2)
-  macvim (= 1.0.0)
   mongodb (= 1.0.4)
   mumble (= 1.0.5)
   nginx (= 1.4.2)
