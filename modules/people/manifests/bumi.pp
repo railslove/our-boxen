@@ -18,4 +18,5 @@ class people::bumi {
     creates  => "${home}/.zshrc",
     require  => Repository[$dotfiles]
   }
+
 }
