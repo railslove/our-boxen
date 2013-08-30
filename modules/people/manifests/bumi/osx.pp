@@ -1,6 +1,6 @@
 class people::bumi::osx {
   
-  include osx::recovery_message { 'If this Mac is found, please call +49 176 22747893': }
+  osx::recovery_message { 'If this Mac is found, please call +49 176 22747893': }
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_print_dialog
   include osx::global::expand_save_dialog
