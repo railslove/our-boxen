@@ -8,6 +8,7 @@ class people::bumi {
   include people::bumi::osx
 
   include zsh
+  include autojump
 
   repository { "${dotfiles}":
     source => 'bumi/dotfiles',

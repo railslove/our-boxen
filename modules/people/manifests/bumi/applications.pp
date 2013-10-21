@@ -16,4 +16,7 @@ class people::bumi::applications {
   include mumble
   include evernote
   include screenhero
+  include sequel_pro
+  include virtualbox
+  include github_for_mac
 }

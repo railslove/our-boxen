@@ -112,6 +112,7 @@ node default {
       'gnu-tar'
     ]:
   }
+  include imagemagick
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,

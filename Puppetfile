@@ -42,6 +42,8 @@ github "osx", "1.6.0"
 github "sysctl", "1.0.0"
 github "java", "1.1.2"
 
+github "imagemagick", "1.2.1"
+github "autojump", "1.0.0"
 github "mumble", "1.0.5"
 github "spotify", "1.0.1"
 github "onepassword", "1.0.2"
@@ -63,6 +65,9 @@ github "alfred", "1.1.2"
 github "iterm2", "1.0.3"
 github "evernote", "2.0.4"
 github "skype", "1.0.4"
+github "sequel_pro", "1.0.1"
+github "virtualbox", "1.0.6" 
+github "github_for_mac", "1.0.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
