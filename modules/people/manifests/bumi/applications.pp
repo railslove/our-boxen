@@ -19,4 +19,5 @@ class people::bumi::applications {
   include sequel_pro
   include virtualbox
   include github_for_mac
+  include macvim
 }

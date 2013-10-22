@@ -14,6 +14,11 @@ GITHUBTARBALL
     autoconf (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-autojump
+  specs:
+    autojump (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.0.2)
@@ -74,6 +79,11 @@ GITHUBTARBALL
     git (1.3.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-github_for_mac
+  specs:
+    github_for_mac (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-heroku
   specs:
     heroku (2.0.0)
@@ -89,6 +99,11 @@ GITHUBTARBALL
     hub (1.0.3)
 
 GITHUBTARBALL
+  remote: boxen/puppet-imagemagick
+  specs:
+    imagemagick (1.2.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-iterm2
   specs:
     iterm2 (1.0.3)
@@ -99,6 +114,11 @@ GITHUBTARBALL
     java (1.1.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-macvim
+  specs:
+    macvim (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-mongodb
   specs:
     mongodb (1.0.4)
@@ -107,6 +127,11 @@ GITHUBTARBALL
   remote: boxen/puppet-mumble
   specs:
     mumble (1.0.5)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mysql
+  specs:
+    mysql (1.1.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -169,6 +194,11 @@ GITHUBTARBALL
     screenhero (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sequel_pro
+  specs:
+    sequel_pro (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-skype
   specs:
     skype (1.0.4)
@@ -199,6 +229,11 @@ GITHUBTARBALL
     transmit (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.6)
+
+GITHUBTARBALL
   remote: boxen/puppet-viscosity
   specs:
     viscosity (1.0.0)
@@ -227,6 +262,7 @@ DEPENDENCIES
   alfred (= 1.1.2)
   arq (= 1.0.0)
   autoconf (= 1.0.0)
+  autojump (= 1.0.0)
   boxen (= 3.0.2)
   btsync (= 1.0.0)
   caffeine (= 1.0.0)
@@ -239,14 +275,18 @@ DEPENDENCIES
   evernote (= 2.0.4)
   gcc (= 2.0.1)
   git (= 1.3.2)
+  github_for_mac (= 1.0.1)
   heroku (= 2.0.0)
   homebrew (= 1.4.1)
   hub (= 1.0.3)
+  imagemagick (= 1.2.1)
   inifile (= 1.0.0)
   iterm2 (= 1.0.3)
   java (= 1.1.2)
+  macvim (= 1.0.0)
   mongodb (= 1.0.4)
   mumble (= 1.0.5)
+  mysql (= 1.1.5)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
   onepassword (= 1.0.2)
@@ -259,6 +299,7 @@ DEPENDENCIES
   repository (= 2.2.0)
   ruby (= 6.3.4)
   screenhero (= 1.0.1)
+  sequel_pro (= 1.0.1)
   skype (= 1.0.4)
   spotify (= 1.0.1)
   stdlib (= 4.1.0)
@@ -266,6 +307,7 @@ DEPENDENCIES
   sysctl (= 1.0.0)
   transmission (= 1.0.0)
   transmit (= 1.0.1)
+  virtualbox (= 1.0.6)
   viscosity (= 1.0.0)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)

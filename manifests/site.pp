@@ -65,6 +65,7 @@ node default {
   include hub
   include openssl
   include postgresql
+  include mysql
   include elasticsearch
   include phantomjs::1_9_0
   include mongodb
