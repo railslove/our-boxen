@@ -1,7 +1,6 @@
 class people::bumi::applications {
   include chrome
   include arq
-  include caffeine
   include colloquy
   include viscosity
   include transmission
@@ -13,8 +12,6 @@ class people::bumi::applications {
   include alfred
   include iterm2::stable
   include skype 
-  include mumble
-  include evernote
   include screenhero
   include sequel_pro
   include virtualbox
