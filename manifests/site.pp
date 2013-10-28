@@ -52,28 +52,58 @@ Service {
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
-  # core modules, needed for most things
-  include dnsmasq
-  include git
-  include hub
-  include nginx
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
   }
 
+
+  # core modules, needed for most things
+  include dnsmasq
+  include git
+  include hub
+  include openssl
+  include postgresql
+  include mysql
+  include elasticsearch
+  include phantomjs::1_9_0
+  include mongodb
+  include redis
+
   # node versions
-  include nodejs::v0_4
-  include nodejs::v0_6
-  include nodejs::v0_8
   include nodejs::v0_10
+  class { 'nodejs::global': version => 'v0.10.13' }
+  nodejs::module { 'bower':
+    node_version => 'v0.10'
+  }
+  nodejs::module { 'grunt':
+    node_version => 'v0.10'
+  }
+  nodejs::module { 'yo':
+    node_version => 'v0.10'
+  }
 
   # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
   include ruby::1_9_3
   include ruby::2_0_0
+  class { 'ruby::global':
+    version => '2.0.0'
+  }
+  ruby::gem { 'bundler for 1.9.3':
+    gem     => 'bundler',
+    ruby    => '1.9.3',
+    version => '~> 1.3.2'
+  }
+  ruby::gem { 'bundler for 2.0.0':
+    gem     => 'bundler',
+    ruby    => '2.0.0',
+    version => '~> 1.3.2'
+  }
+  include heroku
+  heroku::plugin { 'accounts':
+    source => 'ddollar/heroku-accounts'
+  }
 
   # common, useful packages
   package {
@@ -83,6 +113,7 @@ node default {
       'gnu-tar'
     ]:
   }
+  include imagemagick
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
