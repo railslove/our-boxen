@@ -17,4 +17,21 @@ class people::bumi::applications {
   include virtualbox
   include github_for_mac
   include macvim
+
+  class hiddenapp {
+    package { 'Hiddenapp':
+      source   => 'https://hiddenapp.com/static/downloads/hidden2.0.zip',
+      provider => 'compressed_pkg'
+    }
+  }
+  include hiddenapp
+
+  class propaneapp {
+    package { 'Propaneapp':
+      source    => 'http://propaneapp.com/appcast/Propane.zip',
+      provider  => 'compressed_app'
+    }
+  }
+  include propaneapp
+
 }
