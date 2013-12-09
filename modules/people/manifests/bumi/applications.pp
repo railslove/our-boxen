@@ -18,14 +18,6 @@ class people::bumi::applications {
   include github_for_mac
   include macvim
 
-  class hiddenapp {
-    package { 'Hiddenapp':
-      source   => 'https://hiddenapp.com/static/downloads/hidden2.0.zip',
-      provider => 'compressed_pkg'
-    }
-  }
-  include hiddenapp
-
   class propaneapp {
     package { 'Propaneapp':
       source    => 'http://propaneapp.com/appcast/Propane.zip',
@@ -36,7 +28,7 @@ class people::bumi::applications {
   
   class multibit {
     package { 'Multibit':
-      source   => 'https://multibit.org/releases/multibit-0.5.14/multibit-0.5.14.dmg',
+      source   => 'https://multibit.org/releases/multibit-0.5.14/multibit-0.5.15.dmg',
       provider => 'appdmg'
     }
   }
