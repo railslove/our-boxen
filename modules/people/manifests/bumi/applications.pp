@@ -33,5 +33,12 @@ class people::bumi::applications {
     }
   }
   include propaneapp
-
+  
+  class multibit {
+    package { 'Multibit':
+      source   => 'https://multibit.org/releases/multibit-0.5.14/multibit-0.5.14.dmg',
+      provider => 'appdmg'
+    }
+  }
+  include multibit
 }

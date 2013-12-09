@@ -69,6 +69,7 @@ node default {
   include phantomjs::1_9_0
   include mongodb
   include redis
+  include autoconf
 
   # node versions
   include nodejs::v0_10
@@ -111,6 +112,7 @@ node default {
       'findutils',
       'gnu-tar',
       'coreutils',
+      'autogen',
       'grc'
     ]:
   }
