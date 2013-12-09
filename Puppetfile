@@ -40,7 +40,7 @@ github "phantomjs", "2.1.0"
 github "postgresql", "2.2.2"
 github "mysql", "1.2.0"
 github "redis", "2.1.0"
-github "osx", "1.6.0"
+github "osx", "2.2.0"
 github "sysctl", "1.0.0"
 github "java", "1.2.0"
 
