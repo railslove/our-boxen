@@ -63,11 +63,20 @@ class people::bumi::osx {
     value  => 0,
     type   => "int"
   }
+
   boxen::osx_defaults { 'disable secondary click nosglobaldomain':
     user   => $::boxen_user,
     domain => 'NSGlobalDomain',
     key    => 'com.apple.trackpad.enableSecondaryClick',
     value  => false
+  }
+
+  boxen::osx_defaults { 'enable quicklook text selection':
+    user    => $::boxen_user,
+    domain  => 'com.apple.finder',
+    key     => 'QLEnableTextSelection',
+    value   => true,
+    type    => 'bool'
   }
 
 }
