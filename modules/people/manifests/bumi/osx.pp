@@ -1,18 +1,24 @@
 class people::bumi::osx {
-  
+ 
+  osx::recovery_message { 'You are beeing watched. Report your possession to hello@michaelbumann.com': }
   include osx::global::enable_keyboard_control_access
   include osx::global::expand_print_dialog
   include osx::global::expand_save_dialog
   include osx::global::disable_autocorrect
+  include osx::global::disable_remote_control_ir_receiver
   class { 'osx::global::key_repeat_delay':
-    delay => 25
+    delay => 1
   }
   class { 'osx::global::key_repeat_rate':
-    rate => 2
+    rate => 1
   }
   include osx::finder::unhide_library
+  include osx::finder::empty_trash_securely
+
   include osx::universal_access::ctrl_mod_zoom
   include osx::no_network_dsstores
+  include osx::software_update
+
   include osx::dock::clear_dock
   class { 'osx::dock::icon_size': 
     size => 20
@@ -41,13 +47,28 @@ class people::bumi::osx {
     key    => 'Clicking',
     value  => true
   }
-  boxen::osx_defaults { 'tap to click for trackpads':
-    ensure => present,
+
+  boxen::osx_defaults { 'enable firewall': 
+    user    => root,
+    domain  => '/Library/Preferences/com.apple.alf',
+    key     => 'globalstate',
+    value   => 1,
+    type    => 'int'
+  }
+
+  boxen::osx_defaults { 'disable secondary click for trackpads':
     user   => $::boxen_user,
-    domain => 'NSGlobalDomain',
-    key    => 'com.apple.mouse.tapBehavior',
-    value  => 1,
+    domain => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
+    key    => 'TrackpadCornerSecondaryClick',
+    value  => 0,
     type   => "int"
   }
+  boxen::osx_defaults { 'disable secondary click nosglobaldomain':
+    user   => $::boxen_user,
+    domain => 'NSGlobalDomain',
+    key    => 'com.apple.trackpad.enableSecondaryClick',
+    value  => false
+  }
+
 }
 

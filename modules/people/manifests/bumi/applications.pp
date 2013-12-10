@@ -33,4 +33,12 @@ class people::bumi::applications {
     }
   }
   include multibit
+  
+  class litecoin {
+    package { 'Litecoin':
+      source   => 'https://litecoin.org/downloads/macosx/Litecoin-Qt-0.8.5.1.dmg',
+      provider => 'appdmg'
+    }
+  }
+  include litecoin
 }

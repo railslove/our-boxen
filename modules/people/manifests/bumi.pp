@@ -7,8 +7,15 @@ class people::bumi {
   include people::bumi::applications
   include people::bumi::osx
 
+  include projects::bitpesa
+  include projects::skrill
+
   include zsh
   include autojump
+
+  
+  # default db? - needs verification
+  postgresql::db { 'bumi': }
 
   repository { "${dotfiles}":
     source => 'bumi/dotfiles',

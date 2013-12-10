@@ -93,12 +93,12 @@ node default {
   ruby::gem { 'bundler for 1.9.3':
     gem     => 'bundler',
     ruby    => '1.9.3',
-    version => '~> 1.3.2'
+    version => '~> 1.3.5'
   }
   ruby::gem { 'bundler for 2.0.0':
     gem     => 'bundler',
     ruby    => '2.0.0',
-    version => '~> 1.3.2'
+    version => '~> 1.3.5'
   }
   include heroku
   heroku::plugin { 'accounts':
