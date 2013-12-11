@@ -41,4 +41,12 @@ class people::bumi::applications {
     }
   }
   include litecoin
+
+  class littlesnitch {
+    package { 'Littlesnitch': 
+      source   => 'http://www.obdev.at/downloads/LittleSnitch/LittleSnitch-3.3.dmg',
+      provider => 'appdmg'
+    }
+  }
+  include littlesnitch
 }
