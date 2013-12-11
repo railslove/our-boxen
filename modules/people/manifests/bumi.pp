@@ -9,6 +9,7 @@ class people::bumi {
 
   include projects::bitpesa
   include projects::skrill
+  include projects::chefrepo
 
   include zsh
   include autojump
