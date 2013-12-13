@@ -17,6 +17,7 @@ class people::bumi::applications {
   include virtualbox
   include github_for_mac
   include macvim
+  include gpgtools
 
   class propaneapp {
     package { 'Propaneapp':

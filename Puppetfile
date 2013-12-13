@@ -44,6 +44,7 @@ github "osx", "2.2.0"
 github "sysctl", "1.0.0"
 github "java", "1.2.0"
 
+github "gpgtools", "0.0.4", :repo => "gaahrdner/puppet-gpgtools"
 github "macvim", "1.0.0"
 github "imagemagick", "1.2.1"
 github "autojump", "1.0.0"
