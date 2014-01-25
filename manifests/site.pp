@@ -85,21 +85,13 @@ node default {
   }
 
   # default ruby versions
-  include ruby::1_9_3
-  include ruby::2_0_0
+  ruby::version { '1.9.3': }
+  ruby::version { '2.0.0': }
+  ruby::version { '2.1.0': }
   class { 'ruby::global':
     version => '2.0.0'
   }
-  ruby::gem { 'bundler for 1.9.3':
-    gem     => 'bundler',
-    ruby    => '1.9.3',
-    version => '~> 1.3.5'
-  }
-  ruby::gem { 'bundler for 2.0.0':
-    gem     => 'bundler',
-    ruby    => '2.0.0',
-    version => '~> 1.3.5'
-  }
+
   include heroku
   heroku::plugin { 'accounts':
     source => 'ddollar/heroku-accounts'
