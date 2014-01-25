@@ -50,4 +50,13 @@ class people::bumi::applications {
     }
   }
   include littlesnitch
+
+  
+  class dropbox {
+    package { 'Dropbox':
+      provider => 'appdmg',
+      source   => 'https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.4.7.dmg'
+    }
+  }
+  include dropbox
 }
