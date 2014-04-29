@@ -59,4 +59,12 @@ class people::bumi::applications {
     }
   }
   include dropbox
+
+  class firefox {
+    package { 'Firefox':
+      provider => 'appdmg',
+      source   => 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/27.0.1/mac/en-US/Firefox%2027.0.1.dmg'
+    }
+  }
+  include firefox
 }
