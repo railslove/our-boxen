@@ -105,7 +105,10 @@ node default {
       'gnu-tar',
       'coreutils',
       'autogen',
-      'grc'
+      'grc', 
+      'boost', 
+      'wget',
+      'mobile-shell'
     ]:
   }
   include imagemagick
