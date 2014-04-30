@@ -29,7 +29,7 @@ class people::bumi::applications {
   
   class multibit {
     package { 'Multibit':
-      source   => 'https://multibit.org/releases/multibit-0.5.14/multibit-0.5.15.dmg',
+      source   => 'https://multibit.org/releases/multibit-0.5.18/multibit-0.5.18.dmg',
       provider => 'appdmg'
     }
   }
@@ -37,7 +37,7 @@ class people::bumi::applications {
   
   class litecoin {
     package { 'Litecoin':
-      source   => 'https://litecoin.org/downloads/macosx/Litecoin-Qt-0.8.5.1.dmg',
+      source   => 'https://download.litecoin.org/litecoin-0.8.7.1/macosx/Litecoin-Qt-0.8.7.1.dmg',
       provider => 'appdmg'
     }
   }
@@ -63,7 +63,7 @@ class people::bumi::applications {
   class firefox {
     package { 'Firefox':
       provider => 'appdmg',
-      source   => 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/27.0.1/mac/en-US/Firefox%2027.0.1.dmg'
+      source   => 'https://download-installer.cdn.mozilla.net/pub/firefox/releases/29.0/mac/en-US/Firefox%2029.0.dmg'
     }
   }
   include firefox

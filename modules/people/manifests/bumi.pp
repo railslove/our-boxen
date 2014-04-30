@@ -7,7 +7,7 @@ class people::bumi {
   include people::bumi::applications
   include people::bumi::osx
 
-  include projects::bitpesa
+  include projects::blitzbude
   include projects::skrill
   include projects::chefrepo
 

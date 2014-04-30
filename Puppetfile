@@ -4,47 +4,67 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
-def github(name, version, options = nil)
-  options ||= {}
-  options[:repo] ||= "boxen/puppet-#{name}"
-  mod name, version, :github_tarball => options[:repo]
+# Shortcut for a module from GitHub's boxen organization
+def github(name, *args)
+  options ||= if args.last.is_a? Hash
+    args.last
+  else
+    {}
+  end
+
+  if path = options.delete(:path)
+    mod name, :path => path
+  else
+    version = args.first
+    options[:repo] ||= "boxen/puppet-#{name}"
+    mod name, version, :github_tarball => options[:repo]
+  end
+end
+
+# Shortcut for a module under development
+def dev(name, *args)
+  mod name, :path => "#{ENV['HOME']}/src/boxen/puppet-#{name}"
 end
 
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen",      "3.3.5"
+github "boxen", "3.4.2"
+
+# Support for default hiera data in modules
+
+github "module-data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
 
-github "ruby", "7.1.6"
+github "ruby", "7.3.0"
 github "autoconf",   "1.0.0"
 github "dnsmasq",    "1.0.1"
 github "gcc",        "2.0.100"
-github "git",        "1.3.7"
-github "homebrew",   "1.6.0"
-github "hub",        "1.1.0"
+github "git",        "2.3.0"
+github "homebrew",   "1.6.2"
+github "hub",        "1.3.0"
 github "inifile",    "1.0.0", :repo => "puppetlabs/puppetlabs-inifile"
-github "nginx",      "1.4.2"
-github "nodejs",     "3.5.0"
+github "nginx",      "1.4.3"
+github "nodejs",     "3.7.0"
 github "openssl",    "1.0.0"
-github "repository", "2.2.0"
+github "repository", "2.3.0"
 github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
 github "xquartz",    "1.1.1"
 github "elasticsearch", "2.1.0"
 github "qt", "1.1.0"
-github "phantomjs", "2.1.0"
-github "postgresql", "2.2.2"
+github "phantomjs", "2.3.0"
+github "postgresql", "3.0.1"
 github "mysql", "1.2.0"
-github "redis", "2.1.0"
-github "osx", "2.2.0"
+github "redis", "3.0.3"
+github "osx", "2.2.2"
 github "sysctl", "1.0.0"
-github "java", "1.2.0"
+github "java", "1.5.0"
 
-github "gpgtools", "0.0.4", :repo => "gaahrdner/puppet-gpgtools"
+github "gpgtools", "0.1.1"
 github "macvim", "1.0.0"
 github "imagemagick", "1.2.1"
 github "autojump", "1.0.0"
@@ -55,7 +75,7 @@ github "dropbox", "1.2.0"
 github "btsync", "1.0.0"
 github "heroku", "2.0.0"
 github "screenhero", "1.0.1"
-github "chrome", "1.1.1"
+github "chrome", "1.1.2"
 github "viscosity", "1.0.0"
 github "transmission", "1.0.0"
 github "arq", "1.0.0"
@@ -72,5 +92,7 @@ github "sequel_pro", "1.0.1"
 github "virtualbox", "1.0.9" 
 github "github_for_mac", "1.0.1"
 
-# Optional/custom modules. There are tons available at
-# https://github.com/boxen.
+github "foreman",     "1.2.0"
+github "go",          "1.1.0"
+github "pkgconfig",   "1.0.0"
+

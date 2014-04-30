@@ -66,32 +66,30 @@ node default {
   include postgresql
   include mysql
   include elasticsearch
-  include phantomjs::1_9_0
+  include phantomjs::1_9_7
   include mongodb
   include redis
   include autoconf
+  include imagemagick
 
   # node versions
   include nodejs::v0_10
-  class { 'nodejs::global': version => 'v0.10.13' }
-  nodejs::module { 'bower':
-    node_version => 'v0.10'
-  }
-  nodejs::module { 'grunt':
-    node_version => 'v0.10'
-  }
-  nodejs::module { 'yo':
-    node_version => 'v0.10'
-  }
+  class { 'nodejs::global': version => 'v0.10.26' }
 
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
+  ruby::version { '2.1.1': }
   class { 'ruby::global':
-    version => '2.0.0'
+    version => '2.1.1'
   }
 
+  # ensure a gem is installed for all ruby versions
+  ruby::gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.0'
+    ruby_version => '*',
+  }
   include heroku
   heroku::plugin { 'accounts':
     source => 'ddollar/heroku-accounts'
@@ -111,7 +109,6 @@ node default {
       'mobile-shell'
     ]:
   }
-  include imagemagick
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
