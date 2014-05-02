@@ -67,7 +67,6 @@ node default {
   include mysql
   include elasticsearch
   include phantomjs::1_9_7
-  include mongodb
   include redis
   include autoconf
   include imagemagick
@@ -87,8 +86,8 @@ node default {
   # ensure a gem is installed for all ruby versions
   ruby::gem { 'bundler for all rubies':
     gem          => 'bundler',
-    version      => '~> 1.0'
-    ruby_version => '*',
+    version      => '~> 1.6',
+    ruby         => '*'
   }
   include heroku
   heroku::plugin { 'accounts':

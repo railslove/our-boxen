@@ -17,7 +17,6 @@ class people::bumi::applications {
   include virtualbox
   include github_for_mac
   include macvim
-  include gpgtools
 
   class propaneapp {
     package { 'Propaneapp':
@@ -67,4 +66,20 @@ class people::bumi::applications {
     }
   }
   include firefox
+
+  class gpgtools {
+    package { 'GPGTools':
+      name     => 'Install.pkg',
+      provider => 'pkgdmg',
+      source   => 'https://releases.gpgtools.org/GPG%20Suite%20-%202013.10.22.dmg' 
+    }
+  }
+  include gpgtools
+
+  class viscosity {
+    package { 'Viscosity':
+      provider => 'appdmg',
+      source   => 'http://www.sparklabs.com/downloads/Viscosity.dmg'
+    }
+  }
 }
