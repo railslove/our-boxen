@@ -18,6 +18,13 @@ class people::bumi::applications {
   include github_for_mac
   include macvim
 
+  class boot2docker {
+    package {'Boot2Docker':
+      source    => 'https://github.com/boot2docker/osx-installer/releases/download/v1.2.0/Boot2Docker-1.2.0.pkg',
+      provider  => 'pkg'
+  }
+  include boot2docker
+
   class propaneapp {
     package { 'Propaneapp':
       source    => 'http://propaneapp.com/appcast/Propane.zip',

@@ -7,12 +7,17 @@ class people::bumi {
   include people::bumi::applications
   include people::bumi::osx
 
-  include projects::blitzbude
-  include projects::skrill
   include projects::chefrepo
 
   include zsh
   include autojump
+
+  package {
+    [
+      'rabbitmq',
+      'ansible'
+    ]:
+  }
 
   
   # default db? - needs verification
